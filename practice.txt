@@ -1,0 +1,228 @@
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git init
+Initialized empty Git repository in C:/Users/Shirisha Mangali/Desktop/gitPrac/.git/
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git add .
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git commit -m "login"
+[master (root-commit) ab99a8e] login
+ 1 file changed, 1 insertion(+)
+Author: siri <shirisha1862@gmail.com>
+Date:   Wed Aug 6 22:21:27 2025 +0530
+
+    login
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git config --global user.name "shirisha"
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git config --global user.email "shirisha1862@gmail.com"
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git remote add origin https://github.com/Shirisha1862/gitp.git
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git remote -v
+origin  https://github.com/Shirisha1862/gitp.git (fetch)
+origin  https://github.com/Shirisha1862/gitp.git (push)
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git add .
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git commit -m "initial commit"
+[master e040200] initial commit
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push -u origin master
+
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 459 bytes | 153.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:      
+remote:      https://github.com/Shirisha1862/gitp/pull/new/master      
+remote:
+To https://github.com/Shirisha1862/gitp.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout -b feature-one
+Switched to a new branch 'feature-one'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git add .
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push
+fatal: The current branch feature-one has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature-one
+
+To have this happen automatically for branches without a tracking      
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout -b feature-two
+Switched to a new branch 'feature-two'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git add .
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git commit -m "Second feature"
+[feature-two 28a5d40] Second feature
+ 2 files changed, 2 insertions(+)
+ create mode 100644 f1.txt
+ create mode 100644 f2.txt
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push origin master
+Everything up-to-date
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git status       
+On branch feature-two
+nothing to commit, working tree clean
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch main
+fatal: invalid reference: main
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git merge feature-one
+Already up to date.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout feature-one
+Switched to branch 'feature-one'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch
+* feature-one
+  feature-two
+  master
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checout master
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git merge feature-one
+Already up to date.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch -m master main
+
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push -u origin main
+To https://github.com/Shirisha1862/gitp.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Shirisha1862/gitp.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use   
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch
+  feature-one
+  feature-two
+* main
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git feature-one
+git: 'feature-one' is not a git command. See 'git --help'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch feature-one
+Switched to branch 'feature-one'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git add .
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git commit -m "f1"
+[feature-one 65ebba5] f1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 f1.txt
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch feature-two
+Switched to branch 'feature-two'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switc main
+git: 'switc' is not a git command. See 'git --help'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch feature-two
+Switched to branch 'feature-two'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch feature-one
+Switched to branch 'feature-one'
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git switch main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git merge feature-one
+Updating e040200..65ebba5
+Fast-forward
+ f1.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 f1.txt
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git status
+On branch main
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push origin main
+To https://github.com/Shirisha1862/gitp.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Shirisha1862/gitp.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use   
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)  
+Unpacking objects: 100% (3/3), 860 bytes | 53.00 KiB/s, done.
+From https://github.com/Shirisha1862/gitp
+ * [new branch]      main       -> origin/main
+Already up to date.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push origin main
+To https://github.com/Shirisha1862/gitp.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Shirisha1862/gitp.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch
+  feature-one
+  feature-two
+* main
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git brach -r
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+  origin/master
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch -d master
+error: branch 'master' not found
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push origin --delete master
+To https://github.com/Shirisha1862/gitp.git
+ - [deleted]         master
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git checkout main        
+Already on 'main'
+Your branch is based on 'origin/master', but the upstream is gone.     
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git pull origin main     
+From https://github.com/Shirisha1862/gitp
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch --unset-upstream
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git branch --set-upstream-to=origin/main main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git pull origin main     
+From https://github.com/Shirisha1862/gitp
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git pull origin main --allow-unrelated-histories
+From https://github.com/Shirisha1862/gitp
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> git push origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (11/11), 1022 bytes | 204.00 KiB/s, done.        
+Total 11 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Shirisha1862/gitp.git
+   24fc515..0c334a5  main -> main
+PS C:\Users\Shirisha Mangali\Desktop\gitPrac> 
