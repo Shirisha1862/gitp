@@ -1,5 +1,10 @@
-HEAD
+
+
 hello f1
 
 feature one
-feature-two
+
+
+hello f1
+hello from f2
+
