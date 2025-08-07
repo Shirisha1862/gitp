@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 hello f1
+=======
+feature one
+>>>>>>> feature-two
